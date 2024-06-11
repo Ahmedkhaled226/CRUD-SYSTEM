@@ -1,0 +1,18 @@
+.text-main {
+    color: yellow;
+}
+
+item {
+    min-height: 300px;
+}
+
+body {
+    background-color: blueviolet;
+}
+
+#productDesc{
+    height: 100px;
+}
+img{
+    width: 100px;
+}

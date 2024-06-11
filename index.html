@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD SYSTEM</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/css.css">
+
+
+</head>
+
+<body class="">
+    <div class=" w-50 m-auto my-4 shadow-lg p-4 rounded bg-info-subtle">
+        <h1 class="text-center bg-info p-2 rounded  my-2">CRUD SYSTEM</h1>
+        <div class="form-floating mb-3">
+            <input oninput="validationInputs(this , 'msgName')" type="text" class="form-control my-2" id="productName"
+                placeholder="Type product Name">
+            <label for="productName">product Name</label>
+            <p id="msgName" class="alert alert-danger d-none">Invalid Name</p>
+        </div>
+        <div class="form-floating mb-3">
+            <input oninput="validationInputs(this , 'msgCategory')" list="Category" type="text"
+                class="form-control my-2" id="productCategory" placeholder="productCategory">
+            <label for="productCategory">productCategory</label>
+            <datalist id="Category">
+                <option value="TV">
+                <option value="Mobile">
+                <option value="Screen">
+                <option value="Electronic">
+                <option value="Laptops">
+                <option value="Ipads">
+            </datalist>
+            <p id="msgCategory" class="alert alert-danger d-none">Invalid Category</p>
+
+        </div>
+
+        <div class="form-floating mb-3">
+            <input oninput="validationInputs(this , 'msgPrice')" type="number" class="form-control my-2"
+                id="productPrice" placeholder="productPrice">
+            <label for="productPrice">product Price</label>
+            <p id="msgPrice" class="alert alert-danger d-none">Invalid Price</p>
+
+        </div>
+        <div class="form-floating mb-3">
+            <textarea oninput="validationInputs(this , 'msgDesc')" type="text" class="form-control my-2"
+                id="productDesc" placeholder="productDesc"></textarea>
+            <label for="productDesc">product Description</label>
+            <p id="msgDesc" class="alert alert-danger d-none">Invalid Description</p>
+
+        </div>
+        <div class="form-floating mb-3">
+            <input onchange="validationInputs(this , 'msgImg')" type="file" class="form-control my-2" id="productImg"
+                placeholder="productImg"></input>
+            <label for="productImg">product Image</label>
+            <p id="msgImg" class="alert alert-danger d-none">Invalid Image</p>
+
+        </div>
+
+        <button id="btnAdd" onclick="addProduct()" class="btn btn-primary my-2">Add Product</button>
+        <button id="btnUpdate" onclick="updateData()" class="btn btn-info my-2 d-none">Update Product</button>
+
+
+    </div>
+    <input id="searchInput" oninput="displayProduct()" type="search" class="form-control w-50 mx-auto my-5 shadow-lg"
+        placeholder="Search By Name.....">
+
+
+    <table class="table shadow-lg text-center">
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>Product Name</td>
+                <td>Product Category</td>
+                <td>Product Price</td>
+                <td>Product Description</td>
+                <td>Product Image</td>
+                <td>Action</td>
+
+            </tr>
+        </thead>
+        <tbody id="demo">
+
+
+        </tbody>
+
+    </table>
+
+
+
+
+
+
+    <!-- <div class="container ">
+        <div class="row" id="demo">
+
+        </div>
+    </div> -->
+
+
+
+
+
+    <!-- <div class="w-50 m-auto my- shadow-lg p-4 rounded">
+        <input id="productName" type="text" class="form-control my-2" placeholder="Type product name...">
+        <input id="productCategory" type="text" class="form-control my-2" placeholder="Type product Category...">
+        <input id="productPrice" type="text" class="form-control my-2" placeholder="Type product Price...">
+        <textarea id="productDesc" class="form-control my-2" placeholder="Type product Description..."></textarea>
+        <input id="productImg" type="file" class="form-control my-2">
+        <button onclick="addProduct()" class="btn btn-primary">Add product</button>
+    </div>
+
+    <input id="searchInput" oninput="searchItem()" type="search" class="form-control w-50 mx-auto my-5 shadow-lg"
+        placeholder="Search By Name.....">
+
+    <div class="container">
+        <div class="row" id="demo">
+        </div>
+    </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="js/main.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
